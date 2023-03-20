@@ -1,10 +1,6 @@
 import { FC } from "react";
 
-interface Props{
-    currentPokemon: number
-    nextPokemon(): void
-    prevPokemon(): void
-}
+import { ChangeButtons as Props } from "./interfaces";
 
 const ChangeButtons:FC<Props> = ({currentPokemon, nextPokemon, prevPokemon}) => {
     return ( 

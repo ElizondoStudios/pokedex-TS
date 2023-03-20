@@ -34,8 +34,7 @@ const App: FC = () => {
       <ChangeButtons currentPokemon={currentPokemon.current} nextPokemon={nextPokemon} prevPokemon={prevPokemon}/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        {/* <Route path="/:id" element={<Pokemon changeCurrentPokemon={changeCurrentPokemon}/>}/> */}
-        <Route path="/:id" element={<Pokemon/>}/>
+        <Route path="/:id" element={<Pokemon changeCurrentPokemon={changeCurrentPokemon}/>}/>
         <Route path="/not-found" element={<NotFound currentPokemon={currentPokemon.current}/>}/>
         <Route path="*" element={<NotFound currentPokemon={currentPokemon.current}/>}/>
       </Routes>
