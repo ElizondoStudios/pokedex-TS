@@ -1,0 +1,74 @@
+/* ##### pokemon card image ##### */
+
+.pokemon-img{
+  transition: all 0.2s;
+  cursor: pointer;
+}
+  .pokemon-img:hover{
+      transform: translateY(-4%);
+  }
+
+/* ##### change buttons #####*/
+
+.change-buttons--right,.change-buttons--left{
+  position: absolute;
+  top: 50vh;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: transparent;
+  background-size: 50px;
+  background-position: center;
+  width: 50px;
+  height: 80px;
+
+  transition: all 0.2s;
+}
+
+.change-buttons--right{
+  background-image: url("/src/assets/right-arrow.png");
+  right: 8vw;
+}
+
+.change-buttons--left{
+  background-image: url("/src/assets/left-arrow.png");
+  left: 8vw;
+}
+
+  .change-buttons--left:hover, .change-buttons--right:hover{
+      transform: scale(110%);
+  }
+
+/*##### Changing button top for different viewports ##### */
+
+@media (orientation: portrait) {
+  .change-buttons--right,.change-buttons--left{
+      top: 30vh;
+  }
+}
+
+
+/* ##### spinning pokeball from home ##### */
+.pokeball-background{
+  width: 60vw;
+  max-width: 400px;
+  animation: infinite 2s spinning-animation;
+}
+
+  @keyframes spinning-animation {
+      100%{
+          transform: rotate(180deg);
+      }
+  }
+
+/* ##### prefers reduced motion ##### */
+@media(prefers-reduced-motion){
+  .pokemon-img:hover{
+      transform: none;
+  }
+
+  .pokeball-background{
+      animation: none;
+  }
+
+}
